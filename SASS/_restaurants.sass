@@ -1,0 +1,132 @@
+@use "variables"
+
+// ==============================
+// RESTAURANTS
+// ==============================
+
+.num-3
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  width: 100%
+  margin: 0 auto
+
+  padding-top: 50px
+  padding-bottom: 40px
+
+  background-color: variables.$background-light
+
+.num-3 h2
+  width: 100%
+  max-width: variables.$max-width
+
+  padding: 0 20px
+  margin: 0 0 30px
+
+.carte-restaurants
+  display: grid
+  grid-template-columns: 1fr
+
+  width: 100%
+  max-width: variables.$max-width
+
+  padding: 0 20px
+
+  gap: 30px
+
+.carte-restaurants a
+  text-decoration: none
+
+.carte
+  position: relative
+  display: flex
+  flex-direction: column
+
+  width: 100%
+
+  border-radius: 15px
+  overflow: hidden
+
+.carte .image-container
+  position: relative
+
+.carte .image-container img
+  display: block
+  width: 100%
+
+.nouveau
+  position: absolute
+  top: 10px
+  right: 10px
+  z-index: 1
+
+.carte-infos
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  padding: 15px
+
+  background-color: variables.$white
+
+.carte-infos .heart
+  position: relative
+  top: -5px
+
+.carte-texte
+  margin-top: 0
+  color: variables.$black
+
+.carte-texte h3
+  margin-bottom: 5px
+
+.carte-texte p
+  margin: 0
+  font-weight: normal
+
+// ==============================
+// TABLETTES
+// 768px → 1023px
+// ==============================
+
+@media (min-width: 768px) and (max-width: 1023px)
+
+  .carte-restaurants
+    grid-template-columns: repeat(2, 1fr)
+
+    column-gap: 30px
+    row-gap: 50px
+
+  .carte-restaurants > a
+    height: 100%
+
+  .carte
+    width: 100%
+    height: 100%
+
+// ==============================
+// DESKTOP
+// À PARTIR DE 1024px
+// ==============================
+
+@media (min-width: 1024px)
+
+  .num-3
+    padding: 50px 0
+
+  .num-3 h2
+    width: 100%
+    max-width: variables.$max-width
+
+    padding: 0 20px
+    margin: 0 0 30px
+
+  .carte-restaurants
+    grid-template-columns: repeat(2, 1fr)
+
+    column-gap: 30px
+    row-gap: 50px
+
+  .carte
+    width: 100%

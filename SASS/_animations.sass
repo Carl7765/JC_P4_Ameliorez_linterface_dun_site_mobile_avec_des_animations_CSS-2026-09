@@ -1,0 +1,27 @@
+// ==============================
+// ANIMATION DES MENUS
+// ==============================
+
+@keyframes slide
+  from
+    opacity: 0
+    transform: translateX(-400px)
+
+  to
+    opacity: 1
+    transform: translateX(0)
+
+
+.entrees
+  opacity: 0
+  animation: slide 1s ease-out 2s both
+
+
+.plats
+  opacity: 0
+  animation: slide 1s ease-out 2.3s both
+
+
+.desserts
+  opacity: 0
+  animation: slide 1s ease-out 2.6s both

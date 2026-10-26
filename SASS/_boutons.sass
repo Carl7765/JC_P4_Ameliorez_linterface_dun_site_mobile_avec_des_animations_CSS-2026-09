@@ -1,0 +1,126 @@
+@use "variables"
+
+/* ==============================
+ BOUTONS
+ ============================== */
+
+.section1
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  padding: 20px
+  background-color: variables.$background-light
+
+.section1 button
+  position: relative
+  isolation: isolate
+  overflow: hidden
+  width: 218px
+  height: 50px
+  padding: 15px
+  border: none
+  border-radius: 25px
+  color: variables.$white
+  font-size: 16px
+  background: linear-gradient(
+    variables.$secondary-color,
+    variables.$primary-color
+  )
+  box-shadow: variables.$shadow-button
+  cursor: pointer
+
+  transition: transform 300ms ease-out, box-shadow 300ms ease-out
+
+.section1 button::before
+  content: ""
+  position: absolute
+  inset: 0
+  z-index: -1
+  background: linear-gradient(
+    185.8deg,
+    variables.$primary-color,
+    variables.$secondary-color
+  )
+  opacity: 0
+  transition: opacity 300ms ease-out
+
+.section1 button:hover
+  transform: translateY(-2px)
+  box-shadow: 0 6px 18px 0 #00000070
+  filter: brightness(1.12)
+
+.section1 button:hover::before
+  opacity: 0.5
+
+/* ==============================
+ BOUTONS DES MENUS
+ ============================== */
+
+.menu button
+  position: relative
+  isolation: isolate
+  overflow: hidden
+  width: 218px
+  height: 50px
+  padding: 15px
+  border: none
+  border-radius: 25px
+  color: variables.$white
+  font-size: 16px
+
+  background: linear-gradient(
+    variables.$secondary-color,
+    variables.$primary-color
+  )
+  box-shadow: variables.$shadow-button
+  cursor: pointer
+  transition: transform 300ms ease-out, box-shadow 300ms ease-out
+
+.menu button::before
+  content: ""
+  position: absolute
+  inset: 0
+  z-index: -1
+
+  background: linear-gradient(
+    185.8deg,
+    variables.$primary-color,
+    variables.$secondary-color
+  )
+  opacity: 0
+  transition: opacity 300ms ease-out
+
+.menu button:hover
+  transform: translateY(-2px)
+  box-shadow: 0 6px 18px 0 #00000070
+  filter: brightness(1.12)
+
+.menu button:hover::before
+  opacity: 0.5
+
+/* ==============================
+ SECTION BOUTON
+ ============================== */
+
+.section-bouton
+  max-width: 1055px !important
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  padding-top: 30px
+  padding-bottom: 30px
+
+  background-color: variables.$background-card
+
+/* ==============================
+ DESKTOP
+ ============================== */
+
+@media (min-width: 1024px)
+
+  .section-bouton
+    transform: translateX(16px)

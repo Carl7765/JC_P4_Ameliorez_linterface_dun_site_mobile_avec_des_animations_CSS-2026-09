@@ -1,0 +1,51 @@
+// ==============================
+// CHECKBOXES
+// ==============================
+
+input[type="checkbox"]
+  position: absolute
+  opacity: 0
+  width: 0
+  height: 0
+
+
+.check
+  pointer-events: none
+
+
+// ==============================
+// SÉLECTION DES PLATS
+// ==============================
+
+// Entrées
+
+#check1:checked + .entree1 .check,
+#check2:checked + .entree2 .check,
+#check3:checked + .entree3 .check,
+#check4:checked + .entree4 .check,
+
+// Plats
+
+#check5:checked + .plat1 .check,
+#check6:checked + .plat2 .check,
+#check7:checked + .plat3 .check,
+
+// Desserts
+
+#check8:checked + .dessert1 .check,
+#check9:checked + .dessert2 .check,
+#check10:checked + .dessert3 .check
+  transform: translateX(0)
+
+
+#check1:checked + .entree1 .prix,
+#check2:checked + .entree2 .prix,
+#check3:checked + .entree3 .prix,
+#check4:checked + .entree4 .prix,
+#check5:checked + .plat1 .prix,
+#check6:checked + .plat2 .prix,
+#check7:checked + .plat3 .prix,
+#check8:checked + .dessert1 .prix,
+#check9:checked + .dessert2 .prix,
+#check10:checked + .dessert3 .prix
+  transform: translateX(-59px)

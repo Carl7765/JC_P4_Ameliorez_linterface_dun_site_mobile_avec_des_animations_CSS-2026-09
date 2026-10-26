@@ -1,0 +1,231 @@
+// ==============================
+// PLATS
+// ==============================
+
+.entree1,
+.entree2,
+.entree3,
+.entree4,
+.plat1,
+.plat2,
+.plat3,
+.dessert1,
+.dessert2,
+.dessert3
+  position: relative
+
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+
+  width: 100%
+  height: 72px
+
+  padding-left: 15px
+  padding-right: 0
+
+  background-color: #fff
+
+  border-radius: 15.04px
+  overflow: hidden
+
+  box-shadow: 0 4px 15px 0 #0000001a
+
+.entree1-label,
+.entree2-label,
+.entree3-label,
+.entree4-label,
+.plat1-label,
+.plat2-label,
+.plat3-label,
+.dessert1-label,
+.dessert2-label,
+.dessert3-label
+  position: absolute
+  inset: 0
+  z-index: 3
+  cursor: pointer
+
+.entree1 .check,
+.entree2 .check,
+.entree3 .check,
+.entree4 .check,
+.plat1 .check,
+.plat2 .check,
+.plat3 .check,
+.dessert1 .check,
+.dessert2 .check,
+.dessert3 .check
+  z-index: 4
+  pointer-events: none
+
+.sr-only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0)
+  white-space: nowrap
+  border: 0
+
+// ==============================
+// TEXTE DES PLATS
+// ==============================
+
+.entree1 .text,
+.entree2 .text,
+.entree3 .text,
+.entree4 .text,
+.plat1 .text,
+.plat2 .text,
+.plat3 .text,
+.dessert1 .text,
+.dessert2 .text,
+.dessert3 .text
+  flex: 1
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  min-width: 0
+
+.entree1 .text h3,
+.entree1 .text p,
+.entree2 .text h3,
+.entree2 .text p,
+.entree3 .text h3,
+.entree3 .text p,
+.entree4 .text h3,
+.entree4 .text p,
+.plat1 .text h3,
+.plat1 .text p,
+.plat2 .text h3,
+.plat2 .text p,
+.plat3 .text h3,
+.plat3 .text p,
+.dessert1 .text h3,
+.dessert1 .text p,
+.dessert2 .text h3,
+.dessert2 .text p,
+.dessert3 .text h3,
+.dessert3 .text p
+  margin: 0
+  line-height: 1.2
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.entree1 .text p,
+.entree2 .text p,
+.entree3 .text p,
+.entree4 .text p,
+.plat1 .text p,
+.plat1 .text p,
+.plat2 .text p,
+.plat3 .text p,
+.dessert1 .text p,
+.dessert2 .text p,
+.dessert3 .text p
+  font-weight: 300
+
+// ==============================
+// PRIX
+// ==============================
+
+.entree1 .prix,
+.entree2 .prix,
+.entree3 .prix,
+.entree4 .prix,
+.plat1 .prix,
+.plat2 .prix,
+.plat3 .prix,
+.dessert1 .prix,
+.dessert2 .prix,
+.dessert3 .prix
+  margin-left: auto
+  padding-right: 15px
+  padding-bottom: 15px
+
+  display: flex
+  align-items: flex-end
+
+  flex-shrink: 0
+
+  font-weight: bold
+
+  transition: transform 0.3s ease
+
+// ==============================
+// CHECK
+// ==============================
+
+.entree1 .check,
+.entree2 .check,
+.entree3 .check,
+.entree4 .check,
+.plat1 .check,
+.plat2 .check,
+.plat3 .check,
+.dessert1 .check,
+.dessert2 .check,
+.dessert3 .check
+  position: absolute
+  top: 0
+  right: 0
+
+  width: 59px
+  height: 72px
+
+  transform: translateX(100%)
+  transition: transform 0.3s ease
+
+  z-index: 4
+  pointer-events: none
+
+.entree1 .check svg,
+.entree2 .check svg,
+.entree3 .check svg,
+.entree4 .check svg,
+.plat1 .check svg,
+.plat2 .check svg,
+.plat3 .check svg,
+.dessert1 .check svg,
+.dessert2 .check svg,
+.dessert3 .check svg
+  display: block
+
+  width: 59px
+  height: 100%
+
+// ==============================
+// HOVER DES PLATS — DESKTOP
+// ==============================
+
+@media (min-width: 1024px)
+
+  .entree1:hover .check,
+  .entree2:hover .check,
+  .entree3:hover .check,
+  .entree4:hover .check,
+  .plat1:hover .check,
+  .plat2:hover .check,
+  .plat3:hover .check,
+  .dessert1:hover .check,
+  .dessert2:hover .check,
+  .dessert3:hover .check
+    transform: translateX(0)
+
+  .entree1:hover .prix,
+  .entree2:hover .prix,
+  .entree3:hover .prix,
+  .entree4:hover .prix,
+  .plat1:hover .prix,
+  .plat2:hover .prix,
+  .plat3:hover .prix,
+  .dessert1:hover .prix,
+  .dessert2:hover .prix,
+  .dessert3:hover .prix
+    transform: translateX(-59px)

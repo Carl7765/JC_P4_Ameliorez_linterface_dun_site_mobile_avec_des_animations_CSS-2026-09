@@ -1,0 +1,92 @@
+// ==============================
+// LOADER
+// ==============================
+
+@use "variables"
+
+.loader
+  position: fixed
+  inset: 0
+  z-index: 999
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  background: variables.$white
+
+  animation: hide-loader 2s ease-out forwards
+
+
+.spinner1,
+.spinner2,
+.spinner3
+  position: absolute
+
+  border: 10px solid transparent
+  border-radius: 50%
+
+
+.spinner1
+  width: 50px
+  height: 50px
+
+  border-top-color: #89c8fa
+
+  animation: tourne1 1s linear infinite
+
+
+.spinner2
+  width: 100px
+  height: 100px
+
+  border-top-color: variables.$tertiary-color
+
+  animation: tourne2 1s linear infinite
+
+
+.spinner3
+  width: 150px
+  height: 150px
+
+  border-top-color: variables.$primary-color
+
+  animation: tourne3 1s linear infinite
+
+
+// ==============================
+// ANIMATIONS
+// ==============================
+
+@keyframes tourne1
+  from
+    transform: rotateZ(0deg)
+
+  to
+    transform: rotateZ(360deg)
+
+
+@keyframes tourne2
+  from
+    transform: rotateZ(0deg)
+
+  to
+    transform: rotateZ(-360deg)
+
+
+@keyframes tourne3
+  from
+    transform: rotateZ(0deg)
+
+  to
+    transform: rotateZ(360deg)
+
+
+@keyframes hide-loader
+  0%,
+  70%
+    opacity: 1
+
+  100%
+    opacity: 0
+    visibility: hidden

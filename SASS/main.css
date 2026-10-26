@@ -1,0 +1,1033 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 700;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.entrees {
+  opacity: 0;
+  animation: slide 1s ease-out 2s both;
+}
+
+.plats {
+  opacity: 0;
+  animation: slide 1s ease-out 2.3s both;
+}
+
+.desserts {
+  opacity: 0;
+  animation: slide 1s ease-out 2.6s both;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  gap: 17px;
+  background-color: #eaeaea;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2509803922);
+}
+
+form input {
+  border: none;
+  background-color: #eaeaea;
+}
+
+form input::-moz-placeholder {
+  font-weight: bold;
+}
+
+form input::placeholder {
+  font-weight: bold;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+.section1 h1 {
+  font-size: clamp(24px, 4vw, 40px);
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.section1 p {
+  font-weight: 400;
+}
+
+.num-2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.fonctionnement h2 {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 0 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px 0 33px;
+  margin: 0;
+  gap: 20px;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 322.49px;
+  min-width: 0;
+  height: 72.38px;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1490196078);
+  border-radius: 20px;
+}
+
+.option .notif {
+  position: absolute;
+  left: -13px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .options {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px 0 33px;
+    box-sizing: border-box;
+  }
+  .option {
+    flex: 1 1 0;
+    width: auto;
+    max-width: 335px;
+    min-width: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .num-1 {
+    width: 100%;
+  }
+  .num-2 {
+    width: 100%;
+  }
+  .fonctionnement {
+    width: 100%;
+    max-width: 1200px;
+  }
+  .fonctionnement h2 {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .options {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .option {
+    width: 335px;
+    max-width: 335px;
+  }
+}
+.num-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: #f3f3f3;
+}
+
+.num-3 h2 {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 0 30px;
+}
+
+.carte-restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.carte-restaurants a {
+  text-decoration: none;
+}
+
+.carte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carte .image-container {
+  position: relative;
+}
+
+.carte .image-container img {
+  display: block;
+  width: 100%;
+}
+
+.nouveau {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.carte-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.carte-infos .heart {
+  position: relative;
+  top: -5px;
+}
+
+.carte-texte {
+  margin-top: 0;
+  color: #000;
+}
+
+.carte-texte h3 {
+  margin-bottom: 5px;
+}
+
+.carte-texte p {
+  margin: 0;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carte-restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 50px;
+  }
+  .carte-restaurants > a {
+    height: 100%;
+  }
+  .carte {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .num-3 {
+    padding: 50px 0;
+  }
+  .num-3 h2 {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 0 30px;
+  }
+  .carte-restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 50px;
+  }
+  .carte {
+    width: 100%;
+  }
+}
+main .image-container {
+  width: 100%;
+  height: 275px;
+  overflow: hidden;
+  position: relative;
+}
+
+main .image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.entrees,
+.plats,
+.desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+.entrees h2,
+.plats h2,
+.desserts h2 {
+  margin-top: 50px;
+}
+
+.desserts {
+  margin-bottom: 40px;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -40px;
+  padding: 12px;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+}
+
+.menu .titre-menu {
+  font-size: 28px;
+}
+
+.entrees h2,
+.plats h2,
+.desserts h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.entrees h2::after,
+.plats h2::after,
+.desserts h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+
+.menu .text h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main .image-container {
+    width: 100%;
+    height: 383px;
+    overflow: hidden;
+    position: relative;
+  }
+  main .image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+@media (min-width: 1024px) {
+  main .image-container {
+    width: 100%;
+    max-height: 383px;
+    overflow: hidden;
+    position: relative;
+  }
+  main .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menu {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1055px;
+    margin: -40px auto 0;
+  }
+  .entrees,
+  .plats,
+  .desserts {
+    width: 634px;
+  }
+}
+.entree1,
+.entree2,
+.entree3,
+.entree4,
+.plat1,
+.plat2,
+.plat3,
+.dessert1,
+.dessert2,
+.dessert3 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 72px;
+  padding-left: 15px;
+  padding-right: 0;
+  background-color: #fff;
+  border-radius: 15.04px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1019607843);
+}
+
+.entree1-label,
+.entree2-label,
+.entree3-label,
+.entree4-label,
+.plat1-label,
+.plat2-label,
+.plat3-label,
+.dessert1-label,
+.dessert2-label,
+.dessert3-label {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.entree1 .check,
+.entree2 .check,
+.entree3 .check,
+.entree4 .check,
+.plat1 .check,
+.plat2 .check,
+.plat3 .check,
+.dessert1 .check,
+.dessert2 .check,
+.dessert3 .check {
+  z-index: 4;
+  pointer-events: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.entree1 .text,
+.entree2 .text,
+.entree3 .text,
+.entree4 .text,
+.plat1 .text,
+.plat2 .text,
+.plat3 .text,
+.dessert1 .text,
+.dessert2 .text,
+.dessert3 .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.entree1 .text h3,
+.entree1 .text p,
+.entree2 .text h3,
+.entree2 .text p,
+.entree3 .text h3,
+.entree3 .text p,
+.entree4 .text h3,
+.entree4 .text p,
+.plat1 .text h3,
+.plat1 .text p,
+.plat2 .text h3,
+.plat2 .text p,
+.plat3 .text h3,
+.plat3 .text p,
+.dessert1 .text h3,
+.dessert1 .text p,
+.dessert2 .text h3,
+.dessert2 .text p,
+.dessert3 .text h3,
+.dessert3 .text p {
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entree1 .text p,
+.entree2 .text p,
+.entree3 .text p,
+.entree4 .text p,
+.plat1 .text p,
+.plat1 .text p,
+.plat2 .text p,
+.plat3 .text p,
+.dessert1 .text p,
+.dessert2 .text p,
+.dessert3 .text p {
+  font-weight: 300;
+}
+
+.entree1 .prix,
+.entree2 .prix,
+.entree3 .prix,
+.entree4 .prix,
+.plat1 .prix,
+.plat2 .prix,
+.plat3 .prix,
+.dessert1 .prix,
+.dessert2 .prix,
+.dessert3 .prix {
+  margin-left: auto;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.entree1 .check,
+.entree2 .check,
+.entree3 .check,
+.entree4 .check,
+.plat1 .check,
+.plat2 .check,
+.plat3 .check,
+.dessert1 .check,
+.dessert2 .check,
+.dessert3 .check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 59px;
+  height: 72px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.entree1 .check svg,
+.entree2 .check svg,
+.entree3 .check svg,
+.entree4 .check svg,
+.plat1 .check svg,
+.plat2 .check svg,
+.plat3 .check svg,
+.dessert1 .check svg,
+.dessert2 .check svg,
+.dessert3 .check svg {
+  display: block;
+  width: 59px;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .entree1:hover .check,
+  .entree2:hover .check,
+  .entree3:hover .check,
+  .entree4:hover .check,
+  .plat1:hover .check,
+  .plat2:hover .check,
+  .plat3:hover .check,
+  .dessert1:hover .check,
+  .dessert2:hover .check,
+  .dessert3:hover .check {
+    transform: translateX(0);
+  }
+  .entree1:hover .prix,
+  .entree2:hover .prix,
+  .entree3:hover .prix,
+  .entree4:hover .prix,
+  .plat1:hover .prix,
+  .plat2:hover .prix,
+  .plat3:hover .prix,
+  .dessert1:hover .prix,
+  .dessert2:hover .prix,
+  .dessert3:hover .prix {
+    transform: translateX(-59px);
+  }
+}
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check {
+  pointer-events: none;
+}
+
+#check1:checked + .entree1 .check,
+#check2:checked + .entree2 .check,
+#check3:checked + .entree3 .check,
+#check4:checked + .entree4 .check,
+#check5:checked + .plat1 .check,
+#check6:checked + .plat2 .check,
+#check7:checked + .plat3 .check,
+#check8:checked + .dessert1 .check,
+#check9:checked + .dessert2 .check,
+#check10:checked + .dessert3 .check {
+  transform: translateX(0);
+}
+
+#check1:checked + .entree1 .prix,
+#check2:checked + .entree2 .prix,
+#check3:checked + .entree3 .prix,
+#check4:checked + .entree4 .prix,
+#check5:checked + .plat1 .prix,
+#check6:checked + .plat2 .prix,
+#check7:checked + .plat3 .prix,
+#check8:checked + .dessert1 .prix,
+#check9:checked + .dessert2 .prix,
+#check10:checked + .dessert3 .prix {
+  transform: translateX(-59px);
+}
+
+.heart {
+  position: relative;
+  flex-shrink: 0;
+  width: 22px;
+  height: 21px;
+}
+
+.heart input {
+  display: none;
+}
+
+.heart label {
+  display: block;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.heart label svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 21px;
+}
+
+.heart label .heart-full {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.heart input:checked + label .heart-full {
+  opacity: 1;
+}
+
+.carte > .heart {
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .heart label:hover .heart-full {
+    opacity: 1;
+  }
+}
+main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  animation: hide-loader 2s ease-out forwards;
+}
+
+.spinner1,
+.spinner2,
+.spinner3 {
+  position: absolute;
+  border: 10px solid transparent;
+  border-radius: 50%;
+}
+
+.spinner1 {
+  width: 50px;
+  height: 50px;
+  border-top-color: #89c8fa;
+  animation: tourne1 1s linear infinite;
+}
+
+.spinner2 {
+  width: 100px;
+  height: 100px;
+  border-top-color: #99e2d0;
+  animation: tourne2 1s linear infinite;
+}
+
+.spinner3 {
+  width: 150px;
+  height: 150px;
+  border-top-color: #9356dc;
+  animation: tourne3 1s linear infinite;
+}
+
+@keyframes tourne1 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes tourne2 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes tourne3 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes hide-loader {
+  0%, 70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 63px;
+}
+header img {
+  width: 200px;
+  height: 34.2px;
+}
+
+.header-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header-menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-menu svg {
+  position: absolute;
+  left: 0;
+}
+.header-menu img {
+  display: block;
+  width: 197px;
+  height: 36px;
+}
+
+/* ==============================
+ * BOUTONS
+ * ============================== */
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+.section1 button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 218px;
+  height: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+  transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.section1 button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(185.8deg, #9356dc, #ff79da);
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.section1 button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.4392156863);
+  filter: brightness(1.12);
+}
+
+.section1 button:hover::before {
+  opacity: 0.5;
+}
+
+/* ==============================
+ * BOUTONS DES MENUS
+ * ============================== */
+.menu button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 218px;
+  height: 50px;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+  transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.menu button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(185.8deg, #9356dc, #ff79da);
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+.menu button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.4392156863);
+  filter: brightness(1.12);
+}
+
+.menu button:hover::before {
+  opacity: 0.5;
+}
+
+/* ==============================
+ * SECTION BOUTON
+ * ============================== */
+.section-bouton {
+  max-width: 1055px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f6f6f6;
+}
+
+/* ==============================
+ * DESKTOP
+ * ============================== */
+@media (min-width: 1024px) {
+  .section-bouton {
+    transform: translateX(16px);
+  }
+}
+/* ==============================
+ * FOOTER
+ * ============================== */
+footer {
+  width: 100%;
+  background-color: #353535;
+}
+
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px 25px;
+}
+
+footer nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer h3 {
+  margin: 0;
+}
+
+/* ==============================
+ * TABLETTES
+ * 768px → 1023px
+ * ============================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    gap: 16px;
+  }
+  footer nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+/* ==============================
+ * DESKTOP
+ * À PARTIR DE 1024px
+ * ============================== */
+@media (min-width: 1024px) {
+  footer .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40vw;
+    gap: 16px;
+  }
+  footer nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}/*# sourceMappingURL=main.css.map */

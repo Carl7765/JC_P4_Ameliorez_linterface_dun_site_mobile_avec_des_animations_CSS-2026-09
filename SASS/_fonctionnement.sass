@@ -1,0 +1,112 @@
+@use "variables"
+
+// ==============================
+// SECTION FONCTIONNEMENT
+// ==============================
+
+.num-2
+  display: flex
+  justify-content: center
+
+  padding-top: 50px
+  padding-bottom: 50px
+
+.fonctionnement
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  width: 100%
+  max-width: variables.$max-width
+
+.fonctionnement h2
+  width: 100%
+  max-width: variables.$max-width
+
+  padding: 0 20px
+  margin: 0 0 20px
+
+.options
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  width: 100%
+  box-sizing: border-box
+  padding: 0 20px 0 33px
+  margin: 0
+
+  gap: 20px
+
+.option
+  position: relative
+
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+
+  width: 100%
+  max-width: 322.49px
+  min-width: 0
+  height: 72.38px
+
+  background-color: variables.$background-card
+  box-shadow: variables.$shadow
+  border-radius: 20px
+
+.option .notif
+  position: absolute
+  left: -13px
+  top: 50%
+
+  transform: translateY(-50%)
+
+// ==============================
+// TABLETTES
+// 768px → 1023px
+// ==============================
+
+@media (min-width: 768px) and (max-width: 1023px)
+
+  .options
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    gap: 20px
+    padding: 0 20px 0 33px
+    box-sizing: border-box
+
+  .option
+    flex: 1 1 0
+    width: auto
+    max-width: 335px
+    min-width: 0
+
+// ==============================
+// DESKTOP
+// À PARTIR DE 1024px
+// ==============================
+
+@media (min-width: 1024px)
+
+  .num-1
+    width: 100%
+
+  .num-2
+    width: 100%
+
+  .fonctionnement
+    width: 100%
+    max-width: variables.$max-width
+
+  .fonctionnement h2
+    width: 100%
+    margin: 0 0 20px
+
+  .options
+    flex-direction: row
+    gap: 20px
+
+  .option
+    width: 335px
+    max-width: 335px
